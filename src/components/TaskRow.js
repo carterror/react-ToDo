@@ -1,16 +1,21 @@
 export const TaskRow = ({ task, toggleTask }) => {
   return (
     <tr>
-      <td className="d-flex justify-content-between">
-        {task.name}
-        <div className="form-check py-2">
-          <input
-            className="form-check-input"
-            type="checkbox"
-            checked={task.done}
+      <td className="" >
+      <div className="form-check py-2 d-flex justify-content-between">
+      <label className="form-check-label" htmlFor={task.name}>
+      {task.done ? <i class="bi bi-pass-fill"></i> : <i class="bi bi-pass"></i>}
+      {task.name}
+        </label>
+        <input
+          className="form-check-input"
+          type="checkbox"
+          checked={task.done}
             onChange={() => toggleTask(task)}
-          />
-        </div>
+            id={task.name}
+        />
+       
+      </div>
       </td>
     </tr>
   );

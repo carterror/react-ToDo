@@ -17,7 +17,7 @@ export const TaskTable = ({ tasks, toggleTask, isDone = false }) => {
       <table className="table table-dark table-striped border-secondary ">
         <thead>
           <tr>
-            <th> Task {isDone && "Completed"}</th>
+            <th className="d-flex align-content-between"><i class="bi bi-list-check"></i> Task {isDone && "Completed"}</th>
           </tr>
         </thead>
         <tbody>{taskDone(isDone)}</tbody>
