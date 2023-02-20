@@ -14,14 +14,13 @@ export const TaskTable = ({ tasks, toggleTask, isDone = false }) => {
 
   return (
     <div>
-      <table className="table table-dark table-striped border-secondary table-bordered">
-        
-          <thead>
-            <tr>   
-              <th colSpan={2}>Task {isDone && "Completed"}</th>
-            </tr>
-          </thead>
-        <tbody>{taskDone(isDone)}</tbody> 
+      <table className="table table-dark table-striped border-secondary ">
+        <thead>
+          <tr>
+            <th> Task {isDone && "Completed"}</th>
+          </tr>
+        </thead>
+        <tbody>{taskDone(isDone)}</tbody>
       </table>
     </div>
   );

@@ -51,10 +51,9 @@ function App() {
   }
 
   const cleanTask = () => {
-    settaskItems(taskItems.filter((taskItem) => !taskItem.done))
-    setshowDone(false)
-  }
-
+    settaskItems(taskItems.filter((taskItem) => !taskItem.done));
+    setshowDone(false);
+  };
 
   return (
     <div className="App">
@@ -62,7 +61,11 @@ function App() {
         <TaskCreator createTask={createTask} />
         <TaskTable tasks={taskItems} toggleTask={toggleTask} />
 
-        <DisplayControl isCheked={showDone} setshowDone={(checked) => setshowDone(checked)} cleanTask = {cleanTask}/>
+        <DisplayControl
+          isCheked={showDone}
+          setshowDone={(checked) => setshowDone(checked)}
+          cleanTask={cleanTask}
+        />
 
         {showDone === true && (
           <TaskTable tasks={taskItems} toggleTask={toggleTask} isDone={true} />
