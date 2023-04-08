@@ -1,7 +1,7 @@
 {
-  "name": "my-app",
+  "name": "react-ToDo",
   "version": "0.1.0",
-  "homepage": "https://Carterror.github.io/my-app",
+  "homepage": "https://Carterror.github.io/react-ToDo",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
